@@ -8,7 +8,7 @@ import React from 'react'
 
 const DetailsScreen = (props) => {
 console.log(props);
-  const listingId = props.match.params.id;
+  const listingId = parseInt(props.match.params.id);
   let listingToShow;
 
   props.listings.forEach((listing) => {

@@ -1,10 +1,11 @@
-// import { connect } from 'react-redux'
-// import AddListingScreen from '../components/AddListingScreen'
+import { connect } from 'react-redux'
+import AddListingScreen from '../components/AddListingScreen'
+import { addListing } from '../redux/actions'
 
-// const mapStateToProps = (state) => {
-//   return {
-//     listingId: state.listingId
-//   }
-// }
+const mapDispatchToProps = (dispatch) => {
+  return {
+    addListing: (newListing) => dispatch(addListing(newListing)),
+  }
+}
 
-// export default connect(mapStateToProps)(AddListingScreen)
+export default connect(null, mapDispatchToProps)(AddListingScreen)
